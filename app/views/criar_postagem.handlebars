@@ -1,0 +1,66 @@
+<div class="container" id="pagina_home"><!-- Inicio do container-->
+	<!-- Menu Mobile-->
+	<nav class="navbar navbar-light" id="menu_mobile">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoMenuMobile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="conteudoMenuMobile">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a href="home.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="criar_postagem.html" class="nav-link">Criar Post</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Configurações</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Seguidores</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Seguindo</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Sair</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Fim do Menu Mobile -->
+
+	<div class="row"><!-- Inicio da row-->
+		<aside class="col-3" id="menu_home">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="home.html">Home</a></li>
+				<li class="list-group-item"><a href="criar_postagem.html">Criar Post</a></li>
+				<li class="list-group-item"><a href="#">Configurações</a></li>
+				<li class="list-group-item"><a href="#">Seguidores</a></li>
+				<li class="list-group-item"><a href="#">Seguindo</a></li>
+				<li class="list-group-item"><a href="index.html">Sair</a></li>
+			</ul>
+		</aside>
+		<section class="col-9 novaPostagem" id="cartaoPostagem"><!-- Inicio da Section -->
+			<h1>Criar uma nova postagem</h1>
+			<form action="/criar_postagem/nova" method="POST" enctype="multipart/form-data" id="criacaoPostagem">
+				<div class="form-group">
+					<label for="titulo">Titulo da Postagem</label>
+					<input type="text" name="titulo" class="form-control" id="titulo" aria-describedby="inserirTitulo" placeholder="Digite o Titulo do seu Post">
+				</div>
+				<div class="form-group">
+					<label for="imagem">Inserir uma imagem</label>
+					<input type="file" name="imagem" class="form-control-file" id="imagem">
+				</div>
+				<div class="form-group">
+					<label for="conteudoPostagem">Conteúdo da Postagem</label>
+					<textarea class="form-control" name="conteudo" id="conteudoPostagem" rows="10"></textarea>
+				</div>
+				<div class="form-group" class="botaoPostagem">
+					<input type="submit" class="btn btn-primary" value="Criar Post">
+				</div>
+				<a href="post.html">Ir para a página de post</a>
+			</form>
+		</section><!-- Fim da Section -->
+	</div><!-- Fim da Row -->
+</div><!-- Fim do container-->
+	
