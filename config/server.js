@@ -3,7 +3,6 @@ const express = require('express')
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const consign = require('consign')
-//const mogoose = require('mongoose')
 
 //Iniciando o objeto express
 let app = express()
@@ -21,6 +20,7 @@ app.use(bodyParser.json())
 //Efetuando o auto-load das rotas
 consign()
     .include('app/routes')
+    .then('config/db_connection.js')
     .then('app/models')
     .then('app/controllers')
     .into(app)
